@@ -9,9 +9,11 @@ packages = [{include = "course_3"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 langchain-openai = "^0.1.6"
-langchain = "^0.1.19"
 openai = "^1.27.0"
 python-dotenv = "^1.0.1"
+pydantic = "1.10.9"
+docarray = "^0.40.0"
+langchain = "^0.1.19"
 
 
 [tool.poetry.group.dev.dependencies]

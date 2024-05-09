@@ -8,7 +8,14 @@ packages = [{include = "course_3"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+langchain-openai = "^0.1.6"
+langchain = "^0.1.19"
+openai = "^1.27.0"
+python-dotenv = "^1.0.1"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
 
 [build-system]
 requires = ["poetry-core"]

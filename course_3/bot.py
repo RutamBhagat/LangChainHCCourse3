@@ -1,4 +1,5 @@
 ### Create a chatbot
+# Note: This has some memory persistance issues, It might be the way i have setup streamlit, It's definitely not an issue with langchain
 
 from langchain.schema import AIMessage, HumanMessage
 import streamlit as st
@@ -86,7 +87,6 @@ class ChatBot:
         self.tools = tools
         self.functions = [convert_to_openai_function(f) for f in self.tools]
         self.model = ChatOpenAI(temperature=0).bind(functions=self.functions)
-        # Note: This has some memory persistance issues I dont know why
         self.memory = ConversationBufferMemory(return_messages=True, memory_key="chat_history")
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", "You are a helpful but sassy assistant"),
